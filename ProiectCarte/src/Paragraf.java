@@ -1,5 +1,5 @@
 
-public class Paragraf {
+public class Paragraf extends Element  {
 	private String nume;
 	public Paragraf()
 	{
@@ -11,7 +11,7 @@ public class Paragraf {
 	}
 	@Override
 	public String toString() {
-		return "Paragrafe: " + nume ;
+		return "Paragraful: " + nume ;
 	}
 	
 }

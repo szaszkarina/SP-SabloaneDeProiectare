@@ -11,7 +11,11 @@ public class TestCarte {
 		Subcapitol capitolUnuUnu = capitolUnu.getSubcapitol(indexSubcapitol);
 		int indexImagine = capitolUnuUnu.setImagine("Img I");
 		int indexParagraf = capitolUnuUnu.setParagraf("Prgf I");
+		int indexParagraf2 = capitolUnuUnu.setParagraf("Prgf II");
+		int indexParagraf3 = capitolUnuUnu.setParagraf("Prgf III");
+		
 		int indexTabel = capitolUnuUnu.setTabel("Tabl I");
+		int indexTabel2 = capitolUnuUnu.setTabel("Tabl II");
 		System.out.print(myBook);
 	}
 }

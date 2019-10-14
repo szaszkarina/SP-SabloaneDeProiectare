@@ -1,5 +1,5 @@
 
-public class Tabel {
+public class Tabel extends Element {
 	private String nume;
 
 	public Tabel() {
@@ -10,6 +10,6 @@ public class Tabel {
 	}
 	@Override
 	public String toString() {
-		return "Tabelele: " + nume;
+		return "Tabelul: " + nume;
 	}
 }

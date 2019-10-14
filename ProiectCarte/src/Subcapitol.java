@@ -2,9 +2,10 @@ import java.util.ArrayList;
 
 public class Subcapitol {
 	private String nume;
-	private ArrayList<Paragraf> listaParagrafe = new ArrayList<Paragraf>();
-	private ArrayList<Tabel> listaTabele = new ArrayList<Tabel>();
-	private ArrayList<Imagine> listaImagini = new ArrayList<Imagine>();
+
+	
+	private ArrayList<Element> listaElemente = new ArrayList<Element>();
+	
 	public Subcapitol () {
 		
 	}
@@ -15,25 +16,24 @@ public class Subcapitol {
 	public int setTabel(String nume)
 	{
 		Tabel t = new Tabel(nume);
-		this.listaTabele.add(t);
-		return this.listaTabele.indexOf(t);
+		this.listaElemente.add(t);
+		return this.listaElemente.indexOf(t);
 	}
 	public int setImagine(String nume)
 	{
 		Imagine i = new Imagine(nume);
-		this.listaImagini.add(i);
-		return this.listaImagini.indexOf(i);
+		this.listaElemente.add(i);
+		return this.listaElemente.indexOf(i);
 	}
 	public int setParagraf(String nume)
 	{
 		Paragraf p = new Paragraf(nume);
-		this.listaParagrafe.add(p);
-		return this.listaParagrafe.indexOf(p);
+		this.listaElemente.add(p);
+		return this.listaElemente.indexOf(p);
 	}
 	@Override
 	public String toString() {
-		return "Subcapitolele: " + nume + ", \n " + listaParagrafe + ", \n " + listaTabele
-				+ ", \n " + listaImagini;
+		return nume + "\n" + listaElemente;
 	}
 	
 }

@@ -1,5 +1,5 @@
 
-public class Imagine {
+public class Imagine extends Element {
 	private String nume;
 	public Imagine() {
 		
@@ -10,6 +10,6 @@ public class Imagine {
 	}
 	@Override
 	public String toString() {
-		return "Imaginile: " + nume;
+		return  "Imaginea: " + nume;
 	}
 }
