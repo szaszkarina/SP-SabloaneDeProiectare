@@ -32,7 +32,7 @@ public class Subcapitol {
 	}
 	@Override
 	public String toString() {
-		return "Subcapitolul: " + nume + ", \n " + listaParagrafe + ", \n " + listaTabele
+		return "Subcapitolele: " + nume + ", \n " + listaParagrafe + ", \n " + listaTabele
 				+ ", \n " + listaImagini;
 	}
 	

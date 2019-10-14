@@ -11,7 +11,7 @@ public class Paragraf {
 	}
 	@Override
 	public String toString() {
-		return "Paragraful: " + nume ;
+		return "Paragrafe: " + nume ;
 	}
 	
 }

@@ -10,6 +10,6 @@ public class Imagine {
 	}
 	@Override
 	public String toString() {
-		return "Imaginea: " + nume;
+		return "Imaginile: " + nume;
 	}
 }

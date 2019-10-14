@@ -23,7 +23,7 @@ public class Capitol {
 	}
 	@Override
 	public String toString() {
-		return "Capitolul: " + nume + ", \n" + listaSubcapitole;
+		return "Capitolele: " + nume + ", \n" + listaSubcapitole;
 	}
 	
 }

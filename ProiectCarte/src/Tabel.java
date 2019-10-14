@@ -10,6 +10,6 @@ public class Tabel {
 	}
 	@Override
 	public String toString() {
-		return "Tabelul: " + nume;
+		return "Tabelele: " + nume;
 	}
 }
