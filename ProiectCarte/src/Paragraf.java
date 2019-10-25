@@ -1,5 +1,5 @@
 
-public class Paragraf extends Element  {
+public class Paragraf implements Element  {
 	private String nume;
 	public Paragraf()
 	{
@@ -7,11 +7,19 @@ public class Paragraf extends Element  {
 	}
 	public Paragraf(String nume)
 	{
+		super();
 		this.nume = nume;
 	}
-	@Override
-	public String toString() {
-		return "Paragraful: " + nume ;
+	
+	
+	public String getNume() {
+		return nume;
+	}
+	public void setNume(String nume) {
+		this.nume = nume;
+	}
+	public void print() {
+		System.out.println(nume);
 	}
 	
 }

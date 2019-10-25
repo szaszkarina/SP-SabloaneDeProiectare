@@ -1,15 +1,16 @@
 
-public class Tabel extends Element {
+public class Tabel implements Element {
 	private String nume;
 
 	public Tabel() {
 		
 	}
 	public Tabel(String nume) {
+		super();
 		this.nume = nume;
 	}
 	@Override
-	public String toString() {
-		return "Tabelul: " + nume;
+	public void print() {
+		System.out.println(nume);
 	}
 }

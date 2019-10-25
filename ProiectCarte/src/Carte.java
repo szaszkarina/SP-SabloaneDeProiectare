@@ -1,9 +1,10 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Carte {
 	private String nume;
-	private ArrayList<Autor> listaAutori = new ArrayList<Autor>();
-	private ArrayList<Capitol> listaCapitole = new ArrayList<Capitol>();
+	private ArrayList<Autor> listaAutori= new ArrayList<Autor>();
+	private ArrayList<Element> listaElemente = new ArrayList<Element>();
 
 	public Carte(String nume)
 	{
@@ -15,19 +16,16 @@ public class Carte {
 		this.listaAutori.add(autor);
 		}	
 	}
-	public int setCapitol(String nume)
-	{
-		Capitol c = new Capitol(nume);
-		this.listaCapitole.add(c);
-		return listaCapitole.indexOf(c);
+	
+	public void addContent(Element elem) {
+		this.listaElemente.add(elem);
 	}
-	public Capitol getCapitol(int index)
-	{
-		return this.listaCapitole.get(index);
-	}
-	@Override
-	public String toString() {
-		return "Cartea: " + nume + ",\n " + listaAutori + ", \n " + listaCapitole;
+	public void print() {
+		System.out.println(nume);
+		System.out.println(listaAutori);
+		for(Element e: listaElemente) {
+			e.print();
+		}
 	}
 
 
