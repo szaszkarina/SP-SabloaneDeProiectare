@@ -36,29 +36,49 @@ public class TestCarte {
 //		cap1111.addElement(new Imagine("Image subchapter 1.1.1.1"));
 //		noapteBuna.print();
 		
-		long startTime = System.currentTimeMillis();
-		ImageProxy img1 = new ImageProxy("Pamela Anderson");
-		ImageProxy img2 = new ImageProxy("Kim Kardashian");
-		ImageProxy img3 = new ImageProxy("Kirby Griffin");
-		Sectiune playboyS1 = new Sectiune("Front Cover");
-		playboyS1.addElement(img1);
-		Sectiune playboyS2 = new Sectiune("Summer Girls");
-		playboyS2.addElement(img2);
-		playboyS2.addElement(img3);
-		Carte playboy = new Carte("Playboy");
+//		long startTime = System.currentTimeMillis();
+//		ImageProxy img1 = new ImageProxy("Pamela Anderson");
+//		ImageProxy img2 = new ImageProxy("Kim Kardashian");
+//		ImageProxy img3 = new ImageProxy("Kirby Griffin");
+//		Sectiune playboyS1 = new Sectiune("Front Cover");
+//		playboyS1.addElement(img1);
+//		Sectiune playboyS2 = new Sectiune("Summer Girls");
+//		playboyS2.addElement(img2);
+//		playboyS2.addElement(img3);
+//		Carte playboy = new Carte("Playboy");
+//		
+//		long endTime = System.currentTimeMillis();
+//		System.out.println("Creation of the content took " + (endTime -
+//		startTime) + " milliseconds");
+//		startTime = System.currentTimeMillis();
+//		playboyS1.print();
+//		endTime = System.currentTimeMillis();
+//		System.out.println("Printing of the section 1 took " + (endTime -
+//		startTime) + " milliseconds");
+//		startTime = System.currentTimeMillis();
+//		playboyS1.print();
+//		endTime = System.currentTimeMillis();
+//		System.out.println("Printing again the section 1 took " + (endTime -
+//				startTime) + " milliseconds");
+		Sectiune cap1 = new Sectiune("Capitolul 1");
+		Paragraf p1 = new Paragraf("Paragraph 1");
+		cap1.addElement(p1);
+		Paragraf p2 = new Paragraf("Paragraph 2");
+		cap1.addElement(p2);
+		Paragraf p3 = new Paragraf("Paragraph 3");
+		cap1.addElement(p3);
+		Paragraf p4 = new Paragraf("Paragraph 4");
+		cap1.addElement(p4);
+		System.out.println("Printing without Alignment");
+		System.out.println();
+		cap1.print();
+		p1.setAlignStrategy(new AlignCenter());
+		p2.setAlignStrategy(new AlignRight());
+		p3.setAlignStrategy(new AlignLeft());
+		System.out.println();
+		System.out.println("Printing with Alignment");
+		System.out.println();
+		cap1.print();
 		
-		long endTime = System.currentTimeMillis();
-		System.out.println("Creation of the content took " + (endTime -
-		startTime) + " milliseconds");
-		startTime = System.currentTimeMillis();
-		playboyS1.print();
-		endTime = System.currentTimeMillis();
-		System.out.println("Printing of the section 1 took " + (endTime -
-		startTime) + " milliseconds");
-		startTime = System.currentTimeMillis();
-		playboyS1.print();
-		endTime = System.currentTimeMillis();
-		System.out.println("Printing again the section 1 took " + (endTime -
-				startTime) + " milliseconds");
 	}
 }

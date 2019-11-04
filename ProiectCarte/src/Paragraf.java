@@ -1,6 +1,15 @@
 
 public class Paragraf implements Element  {
 	private String nume;
+	  private AlignStrategy al;
+
+	  public AlignStrategy getAlignStrategy() {
+	    return al;
+	  }
+
+	  public void setAlignStrategy(AlignStrategy alignStrategy) {
+	    this.al = alignStrategy;
+	  }
 	public Paragraf()
 	{
 		
@@ -18,8 +27,14 @@ public class Paragraf implements Element  {
 	public void setNume(String nume) {
 		this.nume = nume;
 	}
-	public void print() {
-		System.out.println(nume);
-	}
+	
+	  @Override
+	  public void print() {
+	    if (al != null) {
+	      al.print(nume);
+	    } else {
+	      System.out.println(nume);
+	    }
+	  }
 	
 }
