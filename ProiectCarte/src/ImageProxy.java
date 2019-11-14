@@ -12,5 +12,11 @@ public class ImageProxy implements Element {
 			img.print();
 		
 	}
+	@Override
+	public void accept(Visitor v) {
+		// TODO Auto-generated method stub
+		v.visit(this);
+		
+	}
 	
 }

@@ -60,25 +60,46 @@ public class TestCarte {
 //		endTime = System.currentTimeMillis();
 //		System.out.println("Printing again the section 1 took " + (endTime -
 //				startTime) + " milliseconds");
-		Sectiune cap1 = new Sectiune("Capitolul 1");
-		Paragraf p1 = new Paragraf("Paragraph 1");
-		cap1.addElement(p1);
-		Paragraf p2 = new Paragraf("Paragraph 2");
-		cap1.addElement(p2);
-		Paragraf p3 = new Paragraf("Paragraph 3");
-		cap1.addElement(p3);
-		Paragraf p4 = new Paragraf("Paragraph 4");
-		cap1.addElement(p4);
-		System.out.println("Printing without Alignment");
-		System.out.println();
-		cap1.print();
-		p1.setAlignStrategy(new AlignCenter());
-		p2.setAlignStrategy(new AlignRight());
-		p3.setAlignStrategy(new AlignLeft());
-		System.out.println();
-		System.out.println("Printing with Alignment");
-		System.out.println();
-		cap1.print();
+//		Sectiune cap1 = new Sectiune("Capitolul 1");
+//		Paragraf p1 = new Paragraf("Paragraph 1");
+//		cap1.addElement(p1);
+//		Paragraf p2 = new Paragraf("Paragraph 2");
+//		cap1.addElement(p2);
+//		Paragraf p3 = new Paragraf("Paragraph 3");
+//		cap1.addElement(p3);
+//		Paragraf p4 = new Paragraf("Paragraph 4");
+//		cap1.addElement(p4);
+//		System.out.println("Printing without Alignment");
+//		System.out.println();
+//		cap1.print();
+//		p1.setAlignStrategy(new AlignCenter());
+//		p2.setAlignStrategy(new AlignRight());
+//		p3.setAlignStrategy(new AlignLeft());
+//		System.out.println();
+//		System.out.println("Printing with Alignment");
+//		System.out.println();
+//		cap1.print();
+		
+			Sectiune cap1 = new Sectiune("Capitolul 1");
+			Paragraf p1 = new Paragraf("Paragraph 1");
+			cap1.addElement(p1);
+			Paragraf p2 = new Paragraf("Paragraph 2");
+			cap1.addElement(p2);
+			Paragraf p3 = new Paragraf("Paragraph 3");
+			cap1.addElement(p3);
+			Paragraf p4 = new Paragraf("Paragraph 4");
+			cap1.addElement(p4);
+			cap1.addElement(new ImageProxy("ImageOne"));
+			cap1.addElement(new Imagine("ImageTwo"));
+			cap1.addElement(new Paragraf("Some text"));
+			cap1.addElement(new Tabel("Table 1"));
+			BookStatisticss stats = new BookStatisticss();
+			FinancialBookStatistics stats2 = new FinancialBookStatistics();
+			cap1.accept(stats);
+			cap1.accept(stats2);
+			stats.printStatistics();
+			stats2.printStatistics();
+			
 		
 	}
 }

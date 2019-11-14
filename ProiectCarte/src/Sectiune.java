@@ -29,5 +29,14 @@ public class Sectiune implements Element {
 			e.print();
 		}
 	}
+	
+	
+	public void accept(Visitor v) {
+		// TODO Auto-generated method stub
+		for(Element e: listaElem) {
+			e.accept(v);
+		}
+	}
+	
 
 }

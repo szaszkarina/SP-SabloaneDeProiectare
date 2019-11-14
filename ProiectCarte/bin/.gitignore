@@ -2,3 +2,7 @@
 /AlignLeft.class
 /AlignRight.class
 /AlignCenter.class
+/Visitor.class
+/BookStatisticss.class
+/FinancialBookStatistics.class
+/FinancialBookVisitor.class
