@@ -1,8 +1,6 @@
-/AlignStrategy.class
-/AlignLeft.class
-/AlignRight.class
-/AlignCenter.class
-/Visitor.class
-/BookStatisticss.class
-/FinancialBookStatistics.class
-/FinancialBookVisitor.class
+/Builder.class
+/JSONBuilder.class
+/Command.class
+/OpenCommand.class
+/StatisticsCommand.class
+/DocumentManager.class

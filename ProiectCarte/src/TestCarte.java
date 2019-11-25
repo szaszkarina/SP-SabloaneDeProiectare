@@ -1,7 +1,14 @@
 
+
+		import java.io.IOException;
+
+		import com.fasterxml.jackson.core.JsonParseException;
+		import com.fasterxml.jackson.databind.JsonMappingException;
+
+		
 public class TestCarte {
-	public static void main(String []args)
-	{
+	//public static void main(String []args)
+	//{
 		/*Carte myBook = new Carte("Emotiile");
 		Autor autor = new Autor("Osho");
 		myBook.setAutor(autor);
@@ -80,7 +87,7 @@ public class TestCarte {
 //		System.out.println();
 //		cap1.print();
 		
-			Sectiune cap1 = new Sectiune("Capitolul 1");
+	/*		Sectiune cap1 = new Sectiune("Capitolul 1");
 			Paragraf p1 = new Paragraf("Paragraph 1");
 			cap1.addElement(p1);
 			Paragraf p2 = new Paragraf("Paragraph 2");
@@ -101,5 +108,25 @@ public class TestCarte {
 			stats2.printStatistics();
 			
 		
-	}
+	}*/
+	    
+
+		
+
+		
+//		  public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException {
+//		    JSONBuilder jsonBuilder = new JSONBuilder("/Users/szaszkarina/Downloads/book.json");
+//		    jsonBuilder.build();
+//
+//		    Element myBook = jsonBuilder.getResult();
+//		    myBook.print();
+//		  }
+		  public static void main(String[] args) throws Exception {
+			  Command cmd1 = new OpenCommand("/Users/szaszkarina/Downloads/book.json");
+			  cmd1.execute();
+			  Command cmd2 = new StatisticsCommand();
+			  DocumentManager.getInstance().getCarte().print();
+			  cmd2.execute();
+			
+			  }
 }

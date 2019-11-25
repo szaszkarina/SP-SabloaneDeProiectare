@@ -10,6 +10,10 @@ public class Carte {
 	{
 		this.nume = nume;
 	}
+	public Element getElement(int e)
+	{
+		return listaElemente.get(e);
+	}
 	public void setAutor(Autor autor)
 	{
 		if(autor != null) {
@@ -27,6 +31,7 @@ public class Carte {
 			e.print();
 		}
 	}
+	
 
 
 }
