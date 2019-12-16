@@ -1,6 +1,4 @@
-/Builder.class
-/JSONBuilder.class
-/Command.class
-/OpenCommand.class
-/StatisticsCommand.class
-/DocumentManager.class
+/DeleteCommand.class
+/Memento.class
+/UndoCommand.class
+/RedoCommand.class

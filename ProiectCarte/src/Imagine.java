@@ -32,4 +32,7 @@ public class Imagine implements Element {
 		// TODO Auto-generated method stub
 		v.visit(this);
 	}
+	public Element copy() {
+		return new Imagine(nume);
+	}
 }

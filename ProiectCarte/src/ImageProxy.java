@@ -18,5 +18,7 @@ public class ImageProxy implements Element {
 		v.visit(this);
 		
 	}
-	
+	public Element copy() {
+		return new ImageProxy(nume);
+	}
 }

@@ -43,5 +43,8 @@ public class Paragraf implements Element  {
 		v.visit(this);
 		
 	}
+	public Element copy() {
+		return new Paragraf(nume);
+	}
 	
 }

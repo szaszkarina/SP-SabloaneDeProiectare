@@ -37,6 +37,19 @@ public class Sectiune implements Element {
 			e.accept(v);
 		}
 	}
+	public void remove(Element e) {
+		this.listaElem.remove(e);
+	}
 	
+	public Element  getElementS() {
+		return listaElem.get(listaElem.size() -1);
+	}
+	public Element copy() {
+		Sectiune s =new Sectiune(sectionTitle);
+		for(Element e:listaElem) {
+			s.addElement(e.copy());
+		}
+		return s;
+	}
 
 }

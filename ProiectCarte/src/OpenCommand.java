@@ -15,6 +15,13 @@ public class OpenCommand implements Command {
 	    Element myBook = jsonBuilder.getResult();
 	    c.addContent(myBook);
 	   DocumentManager.getInstance().setCarte(c);
+	  
+	}
+	@Override
+	public void unexecute() {
+		// TODO Auto-generated method stub
+		
+		
 	}
      
 	

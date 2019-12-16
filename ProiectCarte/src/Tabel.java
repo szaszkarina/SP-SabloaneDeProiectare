@@ -17,6 +17,10 @@ public class Tabel implements Element {
 	public void accept(Visitor v) {
 		// TODO Auto-generated method stub
 		v.visit(this);
+	
 		
+	}
+	public Element copy() {
+		return new Tabel(nume);
 	}
 }
