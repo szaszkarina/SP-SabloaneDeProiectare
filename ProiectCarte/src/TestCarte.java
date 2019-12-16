@@ -153,7 +153,13 @@ public class TestCarte {
 		undoCommand.execute();
 		System.out.println("Book Content after second undo: ");
 		DocumentManager.getInstance().getSectiune().print();
-		
+		Command redoCommand = new RedoCommand();
+		redoCommand.execute();
+		System.out.println("Book Content after first REDO: ");
+		DocumentManager.getInstance().getSectiune().print();
+		redoCommand.execute();
+		System.out.println("Book Content after second REDO: ");
+		DocumentManager.getInstance().getSectiune().print();
 		
 		}
 }

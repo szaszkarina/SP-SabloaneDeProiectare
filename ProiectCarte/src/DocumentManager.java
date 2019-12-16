@@ -5,6 +5,9 @@ public class DocumentManager {
   private  Carte book ;
   private Sectiune s;
   private Stack<Command> commandHistory = new Stack<Command>();
+  private Stack<Command> commandHistory2 = new Stack<Command>();
+
+  
 
   private DocumentManager() {}
 
@@ -30,11 +33,18 @@ public class DocumentManager {
   }
   public void addCommand(Command c) {
 	  commandHistory.push(c);
+	  commandHistory2.push(c);
 	  
   }
   public Command  getLastCommand() {
 	  Command c = commandHistory.peek();
 	  commandHistory.pop();
+	  return c;
+  }
+  
+  public Command  getLastUndo() {
+	  Command c = commandHistory2.peek();
+	  commandHistory2.pop();
 	  return c;
   }
   
